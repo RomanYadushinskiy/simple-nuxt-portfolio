@@ -1,9 +1,15 @@
 <script setup>
+const { data: posts } = await useAsyncData('latest-posts', () =>
+  queryContent('/blog')
+    .sort({ data: 1 })
+    .limit(3)
+    .find()
+)
 </script>
 
     <template>
       <section>
-        <h1 class="text-5xl font-bold mt-20">Hello, I'm roman!</h1>
+        <h1 class="text-5xl font-bold mt-20">Hello, I'm Roman!</h1>
         <p class="text-base text-gray-900 p-2 italic">fullstack Developer</p>
       </section>
       <section class="flex flex-col md:flex-row">
@@ -32,7 +38,7 @@
             running and lifting weights to get me through the week. -->
           </p>
         </div>
-        <img src="~/assets/images/danvega-avatar.png" class="w-1/2 md:max-w-sm p-8 mx-auto" />
+        <img src="~/assets/images/simpson-avatar.jpg" class="w-1/2 md:max-w-sm p-8 mx-auto" />
       </section>
        <section>
           <h2 class="text-3xl font-bold mt-8">Latest Blog Posts</h2>
