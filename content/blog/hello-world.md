@@ -1,5 +1,5 @@
 ---
-title: Hello, World!
+title: Hello, World!!
 description: This is my very first blog post and I'm so excited to share it with you!
 date: 2023-05-23
 cover: hello-world.jpg
